@@ -1,15 +1,10 @@
 {
     "buttons": [
         {
-            "title": "Github",
+            "title": "youtube downloader",
             "link": "https://github.com/RexxHayanasi",
-            "icon": "fab fa-github"
-        },
-        {
-            "title": "Youtube",
-            "link": "https://youtube.com/@rexxzynxd",
-            "icon": "fab fa-youtube"
-        },
+            "icon": "fab fa-google"
+        }, 
         {
             "title": "Website Personal",
             "link": "https://rexxzyn.vercel.app",
@@ -19,12 +14,7 @@
             "title": "Instagram",
             "link": "https://instagram.com/rexxzynxd",
             "icon": "fab fa-instagram"
-        },
-        {
-            "title": "Telegram",
-            "link": "http://t.me/rexxzynxd",
-            "icon": "fab fa-telegram"
-        },
+        }, 
         {
             "title": "Store Website",
             "link": "https://rexxzynstore.vercel.app/#products",
@@ -32,7 +22,7 @@
         },
         {
             "title": "WhatsApp",
-            "link": "https://wa.me/message/IFCA2G2YF6EEG1",
+            "link": "https://wa.me/message/EKYN4B3MR2N2L1",
             "icon": "fab fa-whatsapp"
         }
     ]
