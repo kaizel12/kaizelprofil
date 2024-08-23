@@ -26,9 +26,11 @@
         }
         .card {
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
+            margin: 0 auto;
             border-radius: 15px;
             animation: pulseBorder 1.5s infinite alternate;
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.75); /* Stronger glow with larger blur */
         }
         @keyframes pulseBorder {
             from {
@@ -52,12 +54,12 @@
             color: #ffffff;
             border-color: #007bff;
             transition: all 0.3s ease;
-            display: block; /* Ensure buttons stack vertically */
-            text-align: left; /* Align text to the left */
-            padding: 10px; /* Add padding for better readability */
+            display: block;
+            text-align: left;
+            padding: 10px;
         }
         .btn i {
-            margin-right: 10px; /* Add space between icon and text */
+            margin-right: 10px;
         }
         .btn:hover {
             background-color: #0056b3;
@@ -69,14 +71,14 @@
         }
         footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: auto;
             color: #777;
             background-color: #f8f9fa;
             padding: 10px 0;
             width: 100%;
         }
         #buttons-container {
-            display: none; /* Start by hiding the buttons container */
+            display: none;
         }
     </style>
 </head>
@@ -92,42 +94,33 @@
             <div class="card-footer text-muted">
                 <i class="fas fa-map-marker-alt"></i> Indonesia
             </div>
-            <!-- Initial button to trigger fetching and displaying buttons -->
             <button onclick="playAudio()" class="btn" id="playButton">≡ Lihat Link</button>
         </div>
     </div>
 
     <footer>&copy; Hak Cipta 2024 | Luxury Kzm</footer>
 
-    <!-- Script to play audio and fetch buttons from JSON -->
     <script>
-        // Script to play audio and fetch buttons from JSON
         function playAudio() {
             var audio = document.getElementById('linkmp3');
             audio.play();
             
-            // Fetch data from isi.json
             fetch('isi.json')
                 .then(response => response.json())
                 .then(data => {
-                    // Get buttons container
                     var buttonsContainer = document.getElementById('buttons-container');
-                    // Clear previous buttons
                     buttonsContainer.innerHTML = '';
 
-                    // Create buttons from JSON data and append them
                     data.buttons.forEach(button => {
                         var btn = document.createElement('a');
                         btn.setAttribute('href', button.link);
                         btn.setAttribute('class', 'btn');
-                        btn.setAttribute('target', '_blank'); // Open link in new tab
+                        btn.setAttribute('target', '_blank');
 
-                        // Create icon element
                         var icon = document.createElement('i');
                         icon.setAttribute('class', button.icon);
                         btn.appendChild(icon);
 
-                        // Create text span element
                         var textSpan = document.createElement('span');
                         textSpan.textContent = button.title;
                         btn.appendChild(textSpan);
@@ -135,14 +128,11 @@
                         buttonsContainer.appendChild(btn);
                     });
 
-                    // Display buttons container after initial button is clicked
                     buttonsContainer.style.display = 'block';
 
-                    // Show card footer after initial button is clicked
                     var cardFooter = document.querySelector('.card-footer');
                     cardFooter.style.display = 'block';
 
-                    // Hide the initial button after it's clicked
                     var playButton = document.getElementById('playButton');
                     playButton.style.display = 'none';
                 })
@@ -152,10 +142,8 @@
         }
     </script>
 
-    <!-- Audio tag for nightchanges.mp3 file from GitHub -->
     <audio src="https://cdn.jsdelivr.net/gh/feeldreams/feeldreams.github.io/audio/nightchanges.mp3" id="linkmp3" class="hidden"></audio>
 
-    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
