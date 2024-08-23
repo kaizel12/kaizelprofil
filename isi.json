@@ -10,7 +10,13 @@
             "link": "https://fortofoliokaizel.netlify.app/",
             "icon": "fab fa-google"
         }, 
+        
         {
+    "title": "Downloader Website",
+    "link": "https://downloa.netlify.app/",
+    "icon": "fas fa-download"
+}, 
+
             "title": "Store Website",
             "link": "https://kazamistore.netlify.app/",
             "icon": "fas fa-shopping-cart"
