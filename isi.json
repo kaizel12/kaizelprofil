@@ -24,6 +24,11 @@
             "title": "WhatsApp",
             "link": "https://wa.me/message/EKYN4B3MR2N2L1",
             "icon": "fab fa-whatsapp"
+        },
+        {
+            "title": "Downloader Website 2",
+            "link": "https://downloader4rasa.netlify.app/",
+            "icon": "fas fa-cloud-download-alt"
         }
     ]
 }
